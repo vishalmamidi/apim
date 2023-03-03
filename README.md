@@ -37,5 +37,10 @@
             <set-body>@(context.Request.Url.Path)</set-body>
         </return-response>
 ```
-
+```
+        <return-response>
+            <set-status code="200" reason="Ok" />
+            <set-body>@(context.Request.Headers.GetValueOrDefault("x-original-host","notfound"))</set-body>
+        </return-response>
+```
 
