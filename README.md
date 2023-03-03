@@ -23,3 +23,10 @@
 </policies>
 
 ```
+### return hostname
+```
+        <return-response>
+            <set-status code="200" reason="Ok" />
+            <set-body>@(context.Request.OriginalUrl.Host)</set-body>
+        </return-response>
+```
